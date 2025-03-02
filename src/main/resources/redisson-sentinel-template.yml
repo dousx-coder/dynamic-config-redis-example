@@ -1,0 +1,18 @@
+threads: 8
+nettyThreads: 8
+codec: !<org.redisson.codec.JsonJacksonCodec> {}
+transportMode: "NIO"
+sentinelServersConfig:
+  sentinelAddresses:
+    - "redis://192.168.96.151:26371"
+    - "redis://192.168.96.151:26372"
+    - "redis://192.168.96.151:26373"
+  masterName: "redis-nodes"
+  database: 0
+  timeout: 3000
+  retryAttempts: 3
+  retryInterval: 1500
+  readMode: "SLAVE"
+  #  可自定义 org.redisson.connection.balancer.LoadBalancer
+  loadBalancer: !<org.redisson.connection.balancer.RoundRobinLoadBalancer> {}
+  password: node_1fsgg23vK2_3

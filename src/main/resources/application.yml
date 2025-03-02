@@ -1,0 +1,4 @@
+spring:
+  profiles:
+    # 参考 *-template.yml 创建 *-dev.yml
+    active: dev
