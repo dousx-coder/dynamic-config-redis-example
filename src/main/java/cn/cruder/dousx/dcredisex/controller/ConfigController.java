@@ -1,6 +1,6 @@
 package cn.cruder.dousx.dcredisex.controller;
 
-import cn.cruder.dousx.dcredis.component.ConfigUpdater;
+import cn.cruder.dousx.dcredis.component.DcredisConfigUpdater;
 import cn.cruder.tools.rest.CommonRestResult;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class ConfigController {
 
-    private final ConfigUpdater configUpdater;
+    private final DcredisConfigUpdater dcredisConfigUpdater;
 
     /**
      * curl --location --request PUT 'http://127.0.0.1:7210/rce/update-config/reader.url/newv'
@@ -23,7 +23,7 @@ public class ConfigController {
     @PutMapping("/rce/update-config/{key}/{value}")
     public CommonRestResult<String> updateConfig(@PathVariable(value = "key") String key,
                                                  @PathVariable(value = "value") String value) {
-        configUpdater.updateRedisConfig(key, value);
+        dcredisConfigUpdater.updateRedisConfig(key, value);
         return CommonRestResult.ok();
     }
 }
