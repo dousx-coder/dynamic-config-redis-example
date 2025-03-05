@@ -1,10 +1,11 @@
 package cn.cruder.dousx.dcredisex.controller;
 
 import cn.cruder.dousx.dcredis.component.DcredisConfigUpdater;
+import cn.cruder.dousx.dcredis.pojo.UpdateRedisConfigParam;
 import cn.cruder.tools.rest.CommonRestResult;
 import lombok.AllArgsConstructor;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @AllArgsConstructor
@@ -14,16 +15,53 @@ public class ConfigController {
     private final DcredisConfigUpdater dcredisConfigUpdater;
 
     /**
-     * curl --location --request PUT 'http://127.0.0.1:7210/rce/update-config/reader.url/newv'
+     * <li/>示例1：
      *
-     * @param key   key
-     * @param value 新值
+     * <pre>{@code
+     * curl --location --request PUT 'http://127.0.0.1:7210/rce/update-config' `
+     * --header 'Content-Type: application/json' `
+     * --data '{
+     *     "key":"reader:port",
+     *     "config":555
+     * }'
+     * }
+     * </pre>
+     * <li/>示例2：
+     * <pre>{@code
+     * curl --location --request PUT 'http://127.0.0.1:7210/rce/update-config' `
+     * --header 'Content-Type: application/json' `
+     * --data '{
+     *     "key": "seal:info",
+     *     "config": {
+     *         "height": 2.3,
+     *         "id": "1",
+     *         "width": 1.452
+     *     }
+     * }'
+     * }
+     * </pre>
+     * <li/>示例3：
+     * <pre>{@code
+     * curl --location --request PUT 'http://127.0.0.1:7210/rce/update-config' `
+     * --header 'Content-Type: application/json' `
+     * --data '{
+     *     "key": "option:color",
+     *     "config": [
+     *         "REA",
+     *         "green",
+     *         "white"
+     *     ]
+     * }'
+     * }
+     *
+     * </pre>
+     *
+     * @param param {@link UpdateRedisConfigParam}
      * @return {@link CommonRestResult}
      */
-    @PutMapping("/rce/update-config/{key}/{value}")
-    public CommonRestResult<String> updateConfig(@PathVariable(value = "key") String key,
-                                                 @PathVariable(value = "value") String value) {
-        dcredisConfigUpdater.updateRedisConfig(key, value);
+    @PutMapping("/rce/update-config")
+    public CommonRestResult<String> updateConfig(@RequestBody UpdateRedisConfigParam param) {
+        dcredisConfigUpdater.updateRedisConfig(param);
         return CommonRestResult.ok();
     }
 }

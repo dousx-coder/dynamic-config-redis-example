@@ -8,6 +8,9 @@ spring:
       # 使用config配置 需要在config后加一个 | 参考https://github.com/redisson/redisson/tree/master/redisson-spring-boot-starter
       # 使用config配置 指定spring.redis.redisson.codec 需要加双引号 使用file则不需要加双引号
       file: classpath:redisson-single-template.yml
+  application:
+    name: dcredis-example
 dcredis:
   config:
-    nameSpace: service-id
+    # 这里的nameSpace 是redis的key的前缀，根据实际情况修改
+    nameSpace: ${spring.application.name}

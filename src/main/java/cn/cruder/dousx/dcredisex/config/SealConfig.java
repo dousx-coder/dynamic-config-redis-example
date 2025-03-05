@@ -8,7 +8,7 @@ import cn.cruder.dousx.dcredisex.cto.SealInfo;
 @DcredisConfig
 public interface SealConfig {
 
-    @DcredisProperty(key = "seal.info", defaultValue = """
+    @DcredisProperty(key = "seal:info", defaultValue = """
             {
               "height": 2.0,
               "id": "1",

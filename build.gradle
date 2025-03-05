@@ -33,7 +33,7 @@ dependencies {
     testAnnotationProcessor 'org.projectlombok:lombok'
     testImplementation 'org.projectlombok:lombok'
 
-    implementation 'cn.cruder.dousx:dynamic-config-redis-starter:1.1.20250302-15'
+    implementation 'cn.cruder.dousx:dynamic-config-redis-starter:1.1.20250305-16'
 }
 
 tasks.named('test') {
