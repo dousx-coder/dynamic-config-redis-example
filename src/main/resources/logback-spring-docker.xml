@@ -43,7 +43,7 @@
     </root>
 
     <logger name="cn.cruder" level="DEBUG"/>
-    <logger name="org.redisson" level="DEBUG"/>
+    <logger name="org.redisson" level="INFO"/>
 
 
 </configuration>
