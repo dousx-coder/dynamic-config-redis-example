@@ -1,0 +1,9 @@
+server:
+  port: 7210
+logging:
+  config: classpath:logback-spring-dev.xml
+  application:
+    name: dcredis-example
+dcredis:
+  config:
+    nameSpace: ${spring.application.name}

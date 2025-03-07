@@ -8,7 +8,7 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 
 @EnableScheduling
 @Slf4j
-@EnableDcredis
+@EnableDcredis(basePackages = {"cn.cruder", "cn.cruder.dousx.dcredisex"})
 @SpringBootApplication
 public class Application {
 

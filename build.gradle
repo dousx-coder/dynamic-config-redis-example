@@ -10,7 +10,7 @@ idea {
     }
 }
 group = 'cn.cruder.dousx'
-version = '0.0.1-SNAPSHOT'
+version = '1.1.2025-0307-17'
 
 java {
     toolchain {
