@@ -12,7 +12,7 @@ singleServerConfig:
   #密码
   password: "fsv234vs2323"
   address: "redis://host.docker.internal:6379"
-  database: 1
+  database: 2
   subscriptionsPerConnection: 5
   clientName: null
   subscriptionConnectionMinimumIdleSize: 1
