@@ -3,7 +3,10 @@ FROM ringcentral/jdk:17
 # 创建统一存放配置的目录
 RUN mkdir -p /app/config
 RUN chmod -R 755 /app/config
-
+# 设置时区为东八区（Asia/Shanghai）
+ENV TZ=Asia/Shanghai
+RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime \
+    && echo $TZ > /etc/timezone
 # 设置工作目录为 /app（后续操作默认在此目录下执行）
 WORKDIR /app
 
