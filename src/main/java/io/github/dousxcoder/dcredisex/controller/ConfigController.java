@@ -1,9 +1,9 @@
 package io.github.dousxcoder.dcredisex.controller;
 
 
-import cn.cruder.tools.rest.CommonRestResult;
 import io.github.dousxcoder.dcredis.component.DcredisConfigUpdater;
 import io.github.dousxcoder.dcredis.pojo.UpdateRedisConfigParam;
+import io.github.dousxcoder.tools.rest.CommonRestResult;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;

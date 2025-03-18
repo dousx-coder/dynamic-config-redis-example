@@ -1,6 +1,6 @@
 package io.github.dousxcoder.dcredisex.cto;
 
-import cn.cruder.tools.json.JsonUtilPool;
+import io.github.dousxcoder.tools.json.JsonUtilPool;
 import lombok.Getter;
 import lombok.Setter;
 
