@@ -10,7 +10,7 @@ idea {
     }
 }
 group = 'io.github.dousx-coder'
-version = '1.1.2025-0307-17'
+version = '1.1.20250318-21'
 
 java {
     toolchain {
@@ -33,7 +33,7 @@ dependencies {
     testAnnotationProcessor 'org.projectlombok:lombok'
     testImplementation 'org.projectlombok:lombok'
 
-    implementation 'io.github.dousx-coder:dynamic-config-redis-starter:1.1.20250318-16'
+    implementation 'io.github.dousx-coder:dynamic-config-redis-starter:1.1.20250318-21'
 }
 
 tasks.named('test') {
