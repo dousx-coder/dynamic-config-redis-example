@@ -1,6 +1,6 @@
-package cn.cruder.dousx.dcredisex;
+package io.github.dousxcoder.dcredisex;
 
-import cn.cruder.dousx.dcredis.annotation.EnableDcredis;
+import io.github.dousxcoder.dcredis.annotation.EnableDcredis;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -8,7 +8,7 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 
 @EnableScheduling
 @Slf4j
-@EnableDcredis(basePackages = {"cn.cruder", "cn.cruder.dousx.dcredisex"})
+@EnableDcredis(basePackages = {"io.github.dousxcoder.dcredisex"})
 @SpringBootApplication
 public class Application {
 

@@ -42,7 +42,7 @@
         <appender-ref ref="ASYNC"/>
     </root>
 
-    <logger name="cn.cruder" level="DEBUG"/>
+    <logger name="io.github.dousxcoder" level="INFO"/>
     <logger name="org.redisson" level="INFO"/>
 
 

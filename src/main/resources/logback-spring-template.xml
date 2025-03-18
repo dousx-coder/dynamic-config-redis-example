@@ -6,8 +6,7 @@
     <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
         <encoder>
             <!--格式化输出：%d表示日期，%thread表示线程名，%-5level：级别从左显示5个字符宽度%msg：日志消息，%n是换行符 -->
-            <pattern>%red(%d{yyyy-MM-dd HH:mm:ss.SSS}) %green([%thread]) %highlight(%-5level) %boldMagenta(%logger{10}.%M [%line]) - %cyan(%msg%n)
-            </pattern>
+            <pattern>%red(%d{yyyy-MM-dd HH:mm:ss.SSS}) %green([%thread]) %highlight(%-5level) %boldMagenta(%logger{10}.%M [%line]) - %cyan(%msg%n)</pattern>
         </encoder>
     </appender>
     <!-- 文件输出-->
@@ -44,7 +43,7 @@
 
     <!-- 当spring.profiles.active是dev或test时生效 -->
     <springProfile name="dev | test">
-        <logger name="cn.cruder" level="DEBUG"/>
+        <logger name="io.github.dousxcoder" level="DEBUG"/>
         <logger name="org.redisson" level="DEBUG"/>
     </springProfile>
 

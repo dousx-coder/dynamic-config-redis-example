@@ -1,11 +1,8 @@
-package cn.cruder.dousx.dcredisex;
+package io.github.dousxcoder.dcredisex;
 
-import cn.cruder.dousx.dcredisex.config.ReaderConfig;
-import cn.cruder.dousx.dcredisex.cto.SealInfo;
-import cn.cruder.tools.json.JsonUtilPool;
+import io.github.dousxcoder.dcredisex.config.ReaderConfig;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
-import org.redisson.api.RedissonClient;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 

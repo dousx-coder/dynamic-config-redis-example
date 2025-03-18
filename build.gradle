@@ -9,7 +9,7 @@ idea {
         downloadSources = true
     }
 }
-group = 'cn.cruder.dousx'
+group = 'io.github.dousx-coder'
 version = '1.1.2025-0307-17'
 
 java {
@@ -33,7 +33,7 @@ dependencies {
     testAnnotationProcessor 'org.projectlombok:lombok'
     testImplementation 'org.projectlombok:lombok'
 
-    implementation 'cn.cruder.dousx:dynamic-config-redis-starter:1.1.20250306-14'
+    implementation 'io.github.dousx-coder:dynamic-config-redis-starter:1.1.20250318-16'
 }
 
 tasks.named('test') {

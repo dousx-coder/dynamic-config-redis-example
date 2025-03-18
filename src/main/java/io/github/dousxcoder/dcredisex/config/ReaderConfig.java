@@ -1,8 +1,8 @@
-package cn.cruder.dousx.dcredisex.config;
+package io.github.dousxcoder.dcredisex.config;
 
 
-import cn.cruder.dousx.dcredis.annotation.DcredisConfig;
-import cn.cruder.dousx.dcredis.annotation.DcredisProperty;
+import io.github.dousxcoder.dcredis.annotation.DcredisConfig;
+import io.github.dousxcoder.dcredis.annotation.DcredisProperty;
 
 @DcredisConfig
 public interface ReaderConfig {
