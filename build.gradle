@@ -33,7 +33,7 @@ dependencies {
     testAnnotationProcessor 'org.projectlombok:lombok'
     testImplementation 'org.projectlombok:lombok'
 
-    implementation 'io.github.dousx-coder:dynamic-config-redis-starter:1.1.20250318-21'
+    implementation 'io.github.dousx-coder:boot-dynamic-config-redis-starter:1.1.20250321-22'
 }
 
 tasks.named('test') {

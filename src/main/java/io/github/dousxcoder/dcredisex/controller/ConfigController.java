@@ -2,7 +2,7 @@ package io.github.dousxcoder.dcredisex.controller;
 
 
 import io.github.dousxcoder.dcredis.component.DcredisConfigUpdater;
-import io.github.dousxcoder.dcredis.pojo.UpdateRedisConfigParam;
+import io.github.dousxcoder.dcredis.record.UpdateConfigRecord;
 import io.github.dousxcoder.tools.rest.CommonRestResult;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.PutMapping;
@@ -61,7 +61,7 @@ public class ConfigController {
      * @return {@link CommonRestResult}
      */
     @PutMapping("/rce/update-config")
-    public CommonRestResult<String> updateConfig(@RequestBody UpdateRedisConfigParam param) {
+    public CommonRestResult<String> updateConfig(@RequestBody UpdateConfigRecord param) {
         dcredisConfigUpdater.updateRedisConfig(param);
         return CommonRestResult.ok();
     }
