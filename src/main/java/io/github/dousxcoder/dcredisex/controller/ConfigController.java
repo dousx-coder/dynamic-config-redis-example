@@ -1,6 +1,8 @@
 package io.github.dousxcoder.dcredisex.controller;
 
 
+import io.github.dousxcoder.bal.annotation.AopLogger;
+import io.github.dousxcoder.bal.enums.LevelEnum;
 import io.github.dousxcoder.dcredis.component.DcredisConfigUpdater;
 import io.github.dousxcoder.dcredis.record.UpdateConfigRecord;
 import io.github.dousxcoder.tools.rest.CommonRestResult;
@@ -60,6 +62,7 @@ public class ConfigController {
      * @param param {@link UpdateRedisConfigParam}
      * @return {@link CommonRestResult}
      */
+    @AopLogger(level = LevelEnum.INFO, describe = "更新配置")
     @PutMapping("/rce/update-config")
     public CommonRestResult<String> updateConfig(@RequestBody UpdateConfigRecord param) {
         dcredisConfigUpdater.updateRedisConfig(param);
