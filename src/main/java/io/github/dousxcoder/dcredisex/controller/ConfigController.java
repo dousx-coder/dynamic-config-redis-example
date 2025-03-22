@@ -59,7 +59,7 @@ public class ConfigController {
      *
      * </pre>
      *
-     * @param param {@link UpdateRedisConfigParam}
+     * @param param {@link UpdateConfigRecord}
      * @return {@link CommonRestResult}
      */
     @AopLogger(level = LevelEnum.INFO, describe = "更新配置")
