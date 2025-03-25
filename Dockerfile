@@ -1,5 +1,5 @@
 # Dockerfile
-FROM dousx/jdk:17
+FROM dousx/jdk:21
 
 # 创建统一存放配置的目录
 RUN mkdir -p /app/config
